@@ -21,7 +21,7 @@ https://github.com/appium/io.appium.settings - апкашка которой м�
     * https://github.com/dtmilano/AndroidViewClient
     * https://github.com/lkorth/device-automator
 * espresso
-        * https://github.com/open-tool/ultron мощный фреймворк от вк
+    * https://github.com/open-tool/ultron мощный фреймворк от вк
     * https://github.com/KakaoCup/Kakao котлин дсл
     * https://github.com/KasperskyLab/Kaspresso мощенейший фреймворк
     * https://github.com/AdevintaSpain/Barista
@@ -29,7 +29,6 @@ https://github.com/appium/io.appium.settings - апкашка которой м�
     * https://github.com/mauriciotogneri/green-coffee - геркин
 * appium
     * https://github.com/Xappium/xappium.uitest
-
 * https://github.com/alipay/SoloPi - возможность записывать сценарии которые пользователь накликал
 * https://github.com/hhru/android-multimodule-plugin - плагины от  hh.ru
 * Скриншоты
