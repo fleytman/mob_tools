@@ -1,2 +1,3 @@
-# qamobtools
-Tools and manuals for mobile testing
+# mobtools
+Tools and manuals for mobile testing and developing
+
