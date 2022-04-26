@@ -18,7 +18,7 @@
 * https://github.com/AirtestProject/iOS-Tagent по способу работы по
 * https://er.run/blackhole - платная, но рабочая штука
 * https://github.com/danielpaulus/quicktime_video_hack - просмотр аля quiktime , но без него
-* idb video-stream --fps 30 --format h264 --compression-quality 1.0 --udid cdbd7c753c3ce38cb1301e6f922703eb6d20e73b | ffmpeg -f h264 -i pipe:0 -vcodec copy -tune zerolatency -b 900k -framerate 30 -f mpegts udp://127.0.0.1:12345
+* ```idb video-stream --fps 30 --format h264 --compression-quality 1.0 --udid <udid> | ffmpeg -f h264 -i pipe:0 -vcodec copy -tune zerolatency -b 900k -framerate 30 -f mpegts udp://127.0.0.1:12345```
 * https://github.com/DeviceFarmer/stf_ios_support крутой проект, сложный в настройках, но возможно то что надо
 * https://github.com/xuan32546/IOS13-SimulateTouch
 * https://github.com/f-viktor/ghetto-scrcpy-iOS
