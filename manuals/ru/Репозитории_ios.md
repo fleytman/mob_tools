@@ -1,4 +1,5 @@
-## Аналоги adb:
+## Аналоги adb
+### Для девайсов
 * https://github.com/danielpaulus/go-ios
     * fork который возможно что-то внесёт https://github.com/testingbot/go-ios
 * https://github.com/facebook/idb мощный тул от фэйсбука, но немного сложноват в настройке
@@ -6,7 +7,12 @@
 * https://github.com/anonymous5l/iConsole  this project just for learn iOS iTunes communication
 * https://github.com/electricbubble/gidevice-cli
 * https://github.com/alibaba/taobao-iphone-device python реализация от алибабы
-
+* [fruitstrap](https://github.com/ghughes/fruitstrap) - старый репо с двумя популярными форками
+  * https://github.com/ios-control/ios-deploy
+  * https://github.com/unprompted/fruitstrap
+### Только для симуляторов
+* https://github.com/phonegap/ios-sim
+* 
 
 ## Управление с пк (аналоги scrcpy)
 * https://github.com/julioverne/screendump
