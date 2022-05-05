@@ -26,6 +26,7 @@
 * https://github.com/danielpaulus/quicktime_video_hack - просмотр аля quiktime , но без него
 * ```idb video-stream --fps 30 --format h264 --compression-quality 1.0 --udid <udid> | ffmpeg -f h264 -i pipe:0 -vcodec copy -tune zerolatency -b 900k -framerate 30 -f mpegts udp://127.0.0.1:12345```
 * https://github.com/DeviceFarmer/stf_ios_support крутой проект, сложный в настройках, но возможно то что надо
+* https://github.com/kavichki-test/ios-farm - схожий с stf, но неподдерживаемый проект, как бонус [статья](https://habr.com/ru/post/572668/) и [чат](https://t.me/ios_farm_kavichki)
 * https://github.com/xuan32546/IOS13-SimulateTouch
 * https://github.com/f-viktor/ghetto-scrcpy-iOS
 * https://github.com/NetrisTV/ws-scrcpy
