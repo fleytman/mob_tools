@@ -1,3 +1,4 @@
+#copy to ~/.alias
 package=com.mycompany.myapp
 avd=MyAvd
 
@@ -6,6 +7,7 @@ alias u='adb shell pm list packages | grep mycomapy | cut -f 2 -d":" | xargs -L1
 alias ui="idb uninstall $package"
 alias d="adb devices"
 alias di='idb list-targets | grep Booted | column -s "|" -t'
+alias dip='idb list-targets | grep Booted | column -s "|" -t | tr -s " " | cut -d" " -f3 | xargs -L1 -t -I % sh -c "idb connect %; idevicepair pair -u %"'
 alias lh="ls -d .*"
 alias apk="adb install"
 alias ipa="idb install"

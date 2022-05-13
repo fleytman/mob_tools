@@ -1,17 +1,19 @@
+# Copy from this file to ~/.zshrc or ~/.bashrc
+
 #java uncommect and add your paths
 #export JAVA_HOME=/usr/local/opt/openjdk@11
 #export CPPFLAGS=-I/usr/local/opt/openjdk@11/include
-#export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+#export PATH="$JAVA_HOME/bin:$PATH"
 #android tools
 export ANDROID_AVD_HOME=$HOME/.android/avd/
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
+export ANDROID_LATEST_BUILD_TOOLS=$(ls -r ${ANDROID_HOME}/build-tools|head -1)
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-# change to your path
-export PATH=$PATH:$ANDROID_HOME/build-tools/32.1.0-rc1
+export PATH=$PATH:$ANDROID_LATEST_BUILD_TOOLS
 #history no duplicates
 #export HISTCONTROL=ignoreboth:erasedups
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -88,3 +90,7 @@ adb shell settings delete global global_http_proxy_port
 adb shell reboot
 fi
 }
+
+if [ -f ~/.alias ]; then
+. ~/.alias
+fi
