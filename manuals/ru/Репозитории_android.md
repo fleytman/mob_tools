@@ -2,7 +2,14 @@ https://github.com/appium/io.appium.settings - апкашка которой м�
 
 ## adb
 * https://github.com/codeskyblue/fa
-
+* gui
+  * https://github.com/fast-geek/Android-Tool
+  * https://github.com/0x192/universal-android-debloater
+  * https://github.com/Szaki/XiaomiADBFastbootTools
+## Без adb
+* https://github.com/9elements/aoakvm
+* https://github.com/gibsson/linux-adk
+* https://github.com/libusb/libusb
 ## Автоматизация
 * https://android-ui-testing.github.io мануалы по автоматизации
 * ADB в тестах
@@ -51,6 +58,7 @@ https://github.com/appium/io.appium.settings - апкашка которой м�
     * https://github.com/rom1v/sndcpy - для звука
     * https://github.com/barry-ran/QtScrcpy мощный тул с большой степенью кастомизации
     * https://github.com/NetrisTV/ws-scrcpy
+    * https://github.com/yume-chan/ya-webadb черещ веб интерфейс
     * https://github.com/Tomotoes/scrcpy-gui
     * https://github.com/wsvn53/scrcpy-ios
     * https://github.com/shripal17/ScrcpyController - плагин для андроид студии
@@ -66,3 +74,4 @@ https://github.com/appium/io.appium.settings - апкашка которой м�
 * https://github.com/InsertKoinIO/koin
 * https://github.com/Karumi/KataSuperHeroesKotlin
 * https://github.com/WeRockStar/Dagger2
+* https://github.com/JakeWharton/timber
