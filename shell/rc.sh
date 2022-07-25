@@ -15,13 +15,13 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_LATEST_BUILD_TOOLS
-#history no duplicates
+# history no duplicates for zsh
 #export HISTCONTROL=ignoreboth:erasedups
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_FIND_NO_DUPS
+#setopt HIST_EXPIRE_DUPS_FIRST
+#setopt HIST_IGNORE_DUPS
+#setopt HIST_IGNORE_ALL_DUPS
+#setopt HIST_IGNORE_SPACE
+#setopt HIST_FIND_NO_DUPS
 
 # tglogcat 10 - log for last 10 min
 tlogcat(){
