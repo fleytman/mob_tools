@@ -11,7 +11,8 @@ export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_LATEST_BUILD_TOOLS=$(ls -r ${ANDROID_HOME}/build-tools|head -1)
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
+# New tools for work with java > 8 see https://issuetracker.google.com/issues/67495440
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_LATEST_BUILD_TOOLS
 #history no duplicates
