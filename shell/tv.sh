@@ -29,6 +29,8 @@ alias tv_key_dpad_right="tv_keyevent 22"
 alias tv_key_dpad_center="tv_keyevent 23"
 alias tv_key_volume_up="tv_keyevent 24"
 alias tv_key_volume_down="tv_keyevent 25"
+# # set volume from 0 to 100 on xiami tv 4s ru see https://stackoverflow.com/a/52949888/4121942
+alias tv_set_volume="tv_command shell media volume --show --stream 3 --set"
 
 alias tv_key_media_play_pause="tv_keyevent 85"
 alias tv_key_media_stop="tv_keyevent 86"
