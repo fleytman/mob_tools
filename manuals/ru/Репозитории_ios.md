@@ -21,7 +21,7 @@
 * xcrun simctl - основной инструмент для управления симулятором от apple
    * https://github.com/appium/node-simctl 
 * https://github.com/phonegap/ios-sim
-* 
+* https://github.com/MobileNativeFoundation/set-simulator-location
 
 ## Управление с пк (аналоги scrcpy)
 *  https://github.com/facebook/idb ```idb video-stream --fps 30 --format h264 --compression-quality 1.0 --udid <udid> | ffmpeg -f h264 -i pipe:0 -vcodec copy -tune zerolatency -b 900k -framerate 30 -f mpegts udp://127.0.0.1:12345``` только показ экрана
