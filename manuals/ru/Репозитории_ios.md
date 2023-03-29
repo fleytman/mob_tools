@@ -67,6 +67,7 @@
 * https://github.com/apple-cross-toolchain/xcbuild - сборка xcode без macos
 * https://github.com/nsoojin/BookStore-iOS
 * https://github.com/alibaba/youku-sdk-tool-woodpecker - инструмент для дебага внутри аппа
+* https://github.com/vadim-a-yegorov/iOS-Internals-and-Security-Testing - гайд по айос и тестированию безопасности
 
 
 ## jailbreak
