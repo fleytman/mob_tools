@@ -19,7 +19,8 @@
   * https://github.com/unprompted/fruitstrap
 ### Только для симуляторов
 * xcrun simctl - основной инструмент для управления симулятором от apple
-   * https://github.com/appium/node-simctl 
+   * https://github.com/appium/node-simctl
+* https://github.com/wix/AppleSimulatorUtils - ещё 1 инструмент для управления симулятором от аппиум. Уммет давать пермишин на трэкинг, чего не умеет simctl
 * https://github.com/phonegap/ios-sim
 * https://github.com/MobileNativeFoundation/set-simulator-location
 
