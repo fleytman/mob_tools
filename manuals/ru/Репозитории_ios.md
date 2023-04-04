@@ -1,8 +1,9 @@
 ## Аналоги adb
-### Для девайсов
-* https://github.com/danielpaulus/go-ios
-    * fork который возможно что-то внесёт https://github.com/testingbot/go-ios
+### Для девайсов и симуляторов
 * https://github.com/facebook/idb мощный тул от фэйсбука, но немного сложноват в настройке
+### Для девайсов
+* https://github.com/danielpaulus/go-ios - цель автора создать инструмент не привязанный к macos, [подробнее](https://daniel-paulus.medium.com/automate-ios-devices-the-almost-mac-free-way-973e8760f9df)
+    * fork который возможно что-то внесёт https://github.com/testingbot/go-ios
 * https://github.com/libimobiledevice/libimobiledevice много утилит, в их репозиториях есть ещё проекты, часть их которых включены в этот
 * https://github.com/anonymous5l/iConsole  this project just for learn iOS iTunes communication
 * https://github.com/electricbubble/gidevice-cli
