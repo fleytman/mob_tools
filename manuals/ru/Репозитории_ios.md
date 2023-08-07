@@ -7,6 +7,7 @@
 * https://github.com/libimobiledevice/libimobiledevice много утилит, в их репозиториях есть ещё проекты, часть их которых включены в этот
 * https://github.com/anonymous5l/iConsole  this project just for learn iOS iTunes communication
 * https://github.com/electricbubble/gidevice-cli
+  * https://github.com/SonicCloudOrg/sonic-ios-bridge - основан на [gidevice](https://github.com/electricbubble/gidevice), но расширяет его. Также у соников много других тулз есть.
 * https://github.com/alibaba/taobao-iphone-device python реализация от алибабы
 * https://github.com/xuan32546/IOS13-SimulateTouch нужен jailbreak
 * https://github.com/iOSForensics/pymobiledevice - реализация libimobiledevice на python
