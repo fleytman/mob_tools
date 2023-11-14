@@ -4,11 +4,14 @@ package=com.mycompany.myapp
 BUNDLE_ID=com.mycompany.myapp
 avd=MyAvd
 simulator_name="iPhone 13"
+my_project="~/IdeaProjects/myProject"
+android_pattern_url="https://mydomain.com/android/my-"
+ios_pattern_url="https://mydomain.com/ios/my-"
+ios_date_format=+%Y%m%d
+android_date_format=+y%m%d
+ios_download_file_name=my.zip
 apk_file="my.apk"
 ios_file="my.app"
-android_url="https://mydomain.com/my.apk"
-ios_url="https://mydomain.com/my.app"
-my_project="~/IdeaProjects/myProject"
 
 alias h="history | grep"
 alias u='adb shell pm list packages | grep mycomapy | cut -f 2 -d":" | xargs -L1 -t adb uninstall'
@@ -35,17 +38,72 @@ alias bundletool.jar='java -jar ~/bundletool.jar'
 alias stop='adb shell am force-stop $package'
 alias stopi='idb terminate $BUNDLE_ID'
 alias s='scrcpy'
-alias ios_download="curl --output $my_project $ios_url"
-alias android_download="curl --output $my_project/$apk_file $android_url"
 
-# Download zip file with app file, unzip and copy to project_dir
-ios_download(){
-  rm -r $my_project/$ios_file
-  mkdir -p ~/temp
-  curl --output ~/temp/myapp.zip $ios_url
-  unzip ~/temp/myapp.zip -d ~/temp/
-  # copy like dir, because app - it's dir
-  cp -r ~/temp/$(ls -r ~/temp | head -1) $my_project/$ios_file
-  rm -r ~/temp/$(ls -r ~/temp | head -2)
+check_build_url() {
+  local platform="$1"
+  local pattern_url
+  local date_format
+  local file_extension
+
+  if [ "$platform" = "iOS" ]; then
+    pattern_url="$ios_pattern_url"
+    date_format="$ios_date_format"
+    file_extension=".zip"
+  elif [ "$platform" = "Android" ]; then
+    pattern_url="$android_pattern_url"
+    date_format="$android_date_format"
+    file_extension=".apk"
+  else
+    echo "Unsupported platform: $platform"
+    return
+  fi
+
+  for i in {0..13}; do
+    local date_suffix=$(date -v -${i}d $date_format)
+    local url="$pattern_url$date_suffix$file_extension"
+    echo "Check $url"
+    response_code=$(curl -o - -I -L -s -w "%{http_code}" "$url" | tail -n 1)
+
+    if [ "$response_code" -eq 200 ]; then
+      echo -e "\nLatest build for $platform on $url"
+      if [ "$platform" = "iOS" ]; then
+        ios_url=$url
+      elif [ "$platform" = "Android" ]; then
+        android_url=$url
+      fi
+      return
+    fi
+  done
+
+  echo "No $platform dev builds found in the last 14 days"
 }
 
+get_ios_url() {
+  check_build_url "iOS"
+}
+
+get_android_url() {
+  check_build_url "Android"
+}
+
+
+android_download(){
+  get_android_url
+  eval curl --output $my_project/$apk_file "$android_url"
+  }
+
+# Download zip file with app file, unzip and copy to project_dir
+ios_download() {
+  get_ios_url
+  local temp_dir=$(eval echo "~/ios_app_temp")
+  #eval rm -rf $temp_dir
+  eval mkdir -p $temp_dir
+  curl --output $temp_dir/$ios_download_file_name $ios_url
+  echo "unzip -q $temp_dir/$ios_download_file_name -d $temp_dir/"
+  unzip -q $temp_dir/$ios_download_file_name -d $temp_dir/
+  # delete and copy like dir, because app - it's dir
+  echo "eval rm -r $my_project/$ios_file"
+  eval rm -r $my_project/$ios_file
+  echo "eval cp -r "$temp_dir/$(ls -ct $temp_dir | head -1)" "$my_project/$ios_file""
+  eval cp -r "$temp_dir/$(ls -ct $temp_dir | head -1)" "$my_project/$ios_file"
+}
