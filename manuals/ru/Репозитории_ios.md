@@ -11,7 +11,7 @@
 * https://github.com/alibaba/taobao-iphone-device python реализация от алибабы
 * https://github.com/xuan32546/IOS13-SimulateTouch нужен jailbreak
 * https://github.com/iOSForensics/pymobiledevice - реализация libimobiledevice на python
-   * https://github.com/doronz88/pymobiledevice3 - реализация libimobiledevice на python3, актиный репозиторий
+   * https://github.com/doronz88/pymobiledevice3 - реализация libimobiledevice на python3, актиный репозиторий с ios17+
    * https://github.com/dskrypa/pypod - заточен под ipod
    * https://github.com/qtacore/pymobiledevice - активный форк
 * https://github.com/YueChen-C/py-ios-device - информация с устройства включая производительность
